@@ -24,6 +24,7 @@
 
 import 'phaser';
 import { GameConfig } from './config';
+import './gamepad-support';
 
 export class Game extends Phaser.Game {
   constructor(config: Phaser.Types.Core.GameConfig) {
