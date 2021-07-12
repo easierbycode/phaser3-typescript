@@ -17,7 +17,7 @@
     "phaser": "3.52.0"
   },
   "scripts": {
-    "build:gh": "rimraf docs && parcel build index.htm --out-dir docs --public-url /phaser3-typescript/",
+    "build:gh": "rimraf ../../../docs && parcel build index.htm --out-dir ../../../docs --public-url /phaser3-typescript/",
     "dev": "webpack --mode development && webpack serve --mode development"
   },
   "repository": {
