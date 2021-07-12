@@ -51,7 +51,149 @@ export class BootScene extends Phaser.Scene {
     );
 
     // load our package
-    this.load.pack('preload', './assets/pack.json', 'preload');
+    // this.load.pack('preload', require('../../assets/pack.json'), 'preload');
+    [
+      {
+        "type": "bitmapFont",
+        "key": "font",
+        "textureURL": require('../../assets/font/superMarioLand.png'),
+        "fontDataURL": require('../../assets/font/superMarioLand.fnt'
+      },
+      {
+        "type": "tilemapTiledJSON",
+        "key": "level1",
+        "url": require('../../assets/maps/level1.json'
+      },
+      {
+        "type": "tilemapTiledJSON",
+        "key": "level1Room1",
+        "url": require('../../assets/maps/level1room1.json'
+      },
+      {
+        "type": "tilemapTiledJSON",
+        "key": "level1Room2",
+        "url": require('../../assets/maps/level1room2.json'
+      },
+      {
+        "type": "image",
+        "key": "tiles",
+        "url": require('../../assets/tiles/tiles.png'
+      },
+      {
+        "type": "json",
+        "key": "animationJSON",
+        "url": require('../../assets/animations/animations.json'
+      },
+      {
+        "type": "spritesheet",
+        "key": "mario",
+        "url": require('../../assets/sprites/mario.png'),
+        "frameConfig": {
+          "frameWidth": 16,
+          "frameHeight": 16
+        }
+      },
+      {
+        "type": "spritesheet",
+        "key": "box",
+        "url": require('../../assets/sprites/box.png'),
+        "frameConfig": {
+          "frameWidth": 8,
+          "frameHeight": 8
+        }
+      },
+      {
+        "type": "spritesheet",
+        "key": "brick",
+        "url": require('../../assets/sprites/brick.png'),
+        "frameConfig": {
+          "frameWidth": 8,
+          "frameHeight": 8
+        }
+      },
+      {
+        "type": "spritesheet",
+        "key": "rotatingCoin",
+        "url": require('../../assets/sprites/rotatingCoin.png'),
+        "frameConfig": {
+          "frameWidth": 8,
+          "frameHeight": 8
+        }
+      },
+      {
+        "type": "spritesheet",
+        "key": "coin",
+        "url": require('../../assets/sprites/coin.png'),
+        "frameConfig": {
+          "frameWidth": 8,
+          "frameHeight": 8
+        }
+      },
+      {
+        "type": "spritesheet",
+        "key": "goomba",
+        "url": require('../../assets/sprites/goomba.png'),
+        "frameConfig": {
+          "frameWidth": 8,
+          "frameHeight": 8
+        }
+      },
+      {
+        "type": "image",
+        "key": "platform",
+        "url": require('../../assets/images/platform.png'
+      },
+      {
+        "type": "image",
+        "key": "title",
+        "url": require('../../assets/images/title.png'
+      },
+      {
+        "type": "spritesheet",
+        "key": "coin2",
+        "url": require('../../assets/collectibles/coin2.png'),
+        "frameConfig": {
+          "frameWidth": 8,
+          "frameHeight": 8
+        }
+      },
+      {
+        "type": "spritesheet",
+        "key": "flower",
+        "url": require('../../assets/collectibles/flower.png'),
+        "frameConfig": {
+          "frameWidth": 8,
+          "frameHeight": 8
+        }
+      },
+      {
+        "type": "spritesheet",
+        "key": "heart",
+        "url": require('../../assets/collectibles/heart.png'),
+        "frameConfig": {
+          "frameWidth": 8,
+          "frameHeight": 8
+        }
+      },
+      {
+        "type": "spritesheet",
+        "key": "mushroom",
+        "url": require('../../assets/collectibles/mushroom.png'),
+        "frameConfig": {
+          "frameWidth": 8,
+          "frameHeight": 8
+        }
+      },
+      {
+        "type": "spritesheet",
+        "key": "star",
+        "url": require('../../assets/collectibles/star.png'),
+        "frameConfig": {
+          "frameWidth": 8,
+          "frameHeight": 8
+        }
+      }
+    ].forEach( c => this.load[c.type](c) )
   }
 
   update(): void {
